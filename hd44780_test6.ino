@@ -119,6 +119,7 @@ void setup() {
 void loop() {
   int sensor_val = read_analog_avg(sensor_pin);
   int volume_val = read_analog_avg(volume_pin);
+  volume_val = volume_val * 2; // resistor divider
 
   char str[17];
   snprintf(str, 16, "val=%3d,thr=%3d", sensor_val, volume_val);
