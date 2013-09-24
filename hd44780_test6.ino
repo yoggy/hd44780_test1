@@ -23,7 +23,7 @@ void loop() {
   int volume_val = read_analog_avg(volume_pin);
   
   char str[17];
-  snprintf(str, 16, "val=%3d,thr=%3d", sensor_val, volume_val);
+  snprintf(str, 16, "v=%3d,t=%3d", sensor_val, volume_val);
   lcd.setCursor(0, 0);
   lcd.print(str);
 
